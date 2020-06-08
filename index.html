@@ -116,7 +116,28 @@
         </ul>
       </section>
 
-      <section id="contact"></section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form method="POST">
+          <div>
+            <label for="contact_name">Name</label>
+            <input type="text" id="contact_name" name="name" required />
+          </div>
+
+          <div>
+            <label for="contact_email">Email Address</label>
+            <input type="email" id="contact_email" name="email" required />
+          </div>
+
+          <div>
+            <label for="contact_message">Message</label>
+            <textarea id="contact_message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
 
     <footer>
