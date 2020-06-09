@@ -20,7 +20,7 @@
 
   <body>
     <header>
-      <nav class="primary-nav">
+      <nav class="nav nav--primary">
         <ul class="menu">
           <li class="menu__item menu__item--large">
             <a href="/">Elizabeth Thompson</a>
@@ -76,7 +76,7 @@
     </header>
 
     <main>
-      <section id="hero">
+      <section id="hero" class="section">
         <div>
           <h1>This is the title line for my site</h1>
           <p>This is a subtitle</p>
@@ -88,7 +88,7 @@
         </figure>
       </section>
 
-      <section id="portfolio">
+      <section id="portfolio" class="section section--center">
         <h2>Portfolio</h2>
 
         <ul class="blocks">
@@ -138,26 +138,32 @@
         </ul>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="section section--center section--highlight">
         <h2>Contact Me</h2>
 
-        <form method="POST">
-          <div>
-            <label for="contact_name">Name</label>
-            <input type="text" id="contact_name" name="name" required />
+        <form method="POST" class="form">
+          <div class="form__input">
+            <label for="contact_name" class="visually-hidden">Name</label>
+            <input type="text" id="contact_name" name="name" required placeholder="Name" />
           </div>
 
-          <div>
-            <label for="contact_email">Email Address</label>
-            <input type="email" id="contact_email" name="email" required />
+          <div class="form__input">
+            <label for="contact_email" class="visually-hidden">Email Address</label>
+            <input
+              type="email"
+              id="contact_email"
+              name="email"
+              required
+              placeholder="Email Address"
+            />
           </div>
 
-          <div>
-            <label for="contact_message">Message</label>
-            <textarea id="contact_message" name="message" required></textarea>
+          <div class="form__textarea">
+            <label for="contact_message" class="visually-hidden">Message</label>
+            <textarea id="contact_message" name="message" required placeholder="Message"></textarea>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="button">Submit</button>
         </form>
       </section>
     </main>

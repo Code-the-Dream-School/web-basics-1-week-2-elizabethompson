@@ -1,11 +1,11 @@
 :root {
   --color-fg-light: #fff;
   --color-fg-dark: #333;
-  --color-primary: #ff3860;
+  --color-light: #efefef;
   --color-medium: #585858;
   --color-dark: #333;
-  --transition-medium: 0.3s ease-in-out;
-  --transition-fast: 0.1s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-fast: 0.2s ease-in-out;
 }
 
 body {
@@ -18,13 +18,28 @@ body {
 }
 
 header,
-main,
+main > *,
 footer {
   padding: 0 80px;
 }
 
-section:not(:last-of-type) {
-  margin-bottom: 80px;
+.section {
+  display: grid;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section--highlight {
+  background-color: var(--color-light);
+}
+
+.section--center {
+  justify-content: center;
+}
+
+/* TODO: is there a better way to center the heading in the porfolio section? */
+.section--center > * {
+  text-align: center;
 }
 
 h1 {
@@ -34,6 +49,22 @@ h1 {
 h2 {
   font-size: 1.5em;
   margin-bottom: 30px;
+}
+
+.form {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: minmax(auto, 500px);
+}
+
+.form .form__input input,
+.form .form__textarea textarea {
+  border-radius: 2px;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 10px 15px;
+  width: 100%;
 }
 
 .button {
@@ -68,7 +99,18 @@ h2 {
   color: var(--color-fg-light);
 }
 
-.primary-nav {
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.nav.nav--primary {
   align-items: center;
   display: grid;
   grid-auto-flow: column;
@@ -155,8 +197,6 @@ h2 {
 
 footer {
   align-items: center;
-  background-color: var(--color-primary);
-  color: var(--color-fg-light);
   display: grid;
   font-size: 0.9em;
   grid-template-rows: 50px;
