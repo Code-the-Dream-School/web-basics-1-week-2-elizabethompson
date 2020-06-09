@@ -23,32 +23,18 @@ footer {
   padding: 0 80px;
 }
 
-.section {
-  display: grid;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.section--highlight {
-  background-color: var(--color-light);
-}
-
-.section--center {
-  justify-content: center;
-}
-
-/* TODO: is there a better way to center the heading in the porfolio section? */
-.section--center > * {
-  text-align: center;
-}
-
-h1 {
+.title.title--1 {
   font-size: 2em;
+  margin-bottom: 10px;
 }
 
-h2 {
+.title.title--2 {
   font-size: 1.5em;
   margin-bottom: 30px;
+}
+
+.subtitle.subtitle--1 {
+  font-size: 1.4em;
 }
 
 .form {
@@ -74,6 +60,7 @@ h2 {
   box-shadow: none;
   color: var(--color-fg-light);
   cursor: pointer;
+  display: inline-block;
   font-size: 0.75em;
   padding: 14px 35px;
   text-transform: uppercase;
@@ -161,6 +148,46 @@ h2 {
   margin-left: 10px;
 }
 
+.hero {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.hero .hero__content .button {
+  margin-top: 40px;
+}
+
+/* TODO: is there a better way to align the image in the hero section? */
+.hero .hero__media {
+  text-align: right;
+}
+
+.hero .hero__media img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+}
+
+.section {
+  display: grid;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section--highlight {
+  background-color: var(--color-light);
+}
+
+.section--center {
+  justify-content: center;
+}
+
+/* TODO: is there a better way to center the heading in the porfolio section? */
+.section--center > * {
+  text-align: center;
+}
+
 .blocks {
   display: grid;
   grid-auto-flow: column;
@@ -200,5 +227,4 @@ footer {
   display: grid;
   font-size: 0.9em;
   grid-template-rows: 50px;
-  justify-content: center;
 }
